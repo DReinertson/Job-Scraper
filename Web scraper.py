@@ -21,15 +21,19 @@ location = []
 listing = []
 dates = []
 
+def job_sort(list):
+    return
+
 def job_title(soup):
     jobs = []
     ##Div class list-group-item contains information about jobs.
     ##Will append respective information to correct variable and compile each variable at the end.
 
+    ##Find all divs with attribute to find date. Will turn this date into pure number form instead of month ' ' number
+    ##Will then append this date to the dates variable. Will eventually sort jobs based upon date posted, most recent first
     for date in soup.find_all(name = "div", attrs = {"class" : "col-sm-1 col-xs-2"}):
         new_date = ''
         date = date.contents[1].text
-        print ("date: ", date)
         if "Jan" in date:
             new_date = date.replace("Jan", "1")
         elif "Feb" in date:
@@ -54,11 +58,13 @@ def job_title(soup):
             new_date = date.replace("Nov", "11")
         elif "Dec" in date:
             new_date = date.replace("Dec", "12")
-        print ("new_date: ", new_date)
+        dates.append(new_date)
 
+    ##Find job-descriptions for summary. Will append to list that will be compiled at the end.
     for desc in soup.find_all(name = "p", attrs = {"class" : "job-description"}):
-        summary.append(desc.text)
+        summary.append(desc.text.strip())
 
+    ##h5 anchor is within li tag. There are other h5 tags outside of li tag with class, else I would get rid of first for loop.
     for div in soup.find_all(name = "li", attrs = {"class" : "list-group-item"}):
 
         ##locating h5 and then anchor will give job-title. Append job-title to list of titles.
@@ -77,24 +83,20 @@ def job_title(soup):
             else:
                 location.append(p.contents[1])
 
-        ##Find all Dates attributed with each job posting. Will use to sort scraped data into chronilogical order
-        for date in div.find_all(attrs = {"class" : "col-sm-1 col-xs-2"}):
-            print ('date:', date.text)
 
 
-def contract(soup):
-    return
+
 
 job_title(soup)
 # print("job_list: ", len(job_list))
 # print ("description: ", len(description))
 # print("location: ", len(location))
 # print("summary: ", len(summary))
-print ("dates: ", dates)
-#
-# def compile():
-#     for x in range (0, len(job_list)):
-#         listing.append((job_list[x], description[x], location[x], summary[x]))
-#
-# compile()
-# print ("listing: ", listing)
+# print ("dates: ", dates)
+
+def compile():
+    for x in range (0, len(job_list)):
+        listing.append((job_list[x], description[x], location[x], summary[x], dates [x]))
+
+compile()
+print ("listing: ", listing)
