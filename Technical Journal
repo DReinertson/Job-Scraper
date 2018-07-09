@@ -7,6 +7,7 @@
 	- I may need to remove the space from the date within the scraper and turn the potential string into a int to have sort properly work. 
 	- Will need to create for loop to go through all pages of search and filter those. Still need to convert this data into an excel or whatever medium I decide upon (Probably excel spreadsheet).
 	- Thinking I should either subscripe to flexjobs or I should begin to create a scraper for craig's list or a different site. 
+	- Will need to acquire the html for each job and have that in the scraped data so I can access the post from the scraper. 
 
 7/7/18 : Making month strings into respective numbers
 	- Thinking about the Web scraper. Had conversation with Eric not fully understanding the point of doing it. He mentioned the idea of using the webscraper one day and finding a way to check if there were new posts between days (i.e. making list that shows only new posts or using the scraper to organize via date posted?)
