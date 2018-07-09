@@ -21,8 +21,9 @@ location = []
 listing = []
 dates = []
 
-def job_sort(list):
-    return
+def job_sort(list, index):
+    list.sort(key = lambda x: x[index])
+    return list
 
 def job_title(soup):
     jobs = []
@@ -99,4 +100,5 @@ def compile():
         listing.append((job_list[x], description[x], location[x], summary[x], dates [x]))
 
 compile()
+job_sort(listing, 4)
 print ("listing: ", listing)
