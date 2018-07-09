@@ -20,10 +20,11 @@ summary = []
 location = []
 listing = []
 dates = []
+job_link = []
 
 def job_sort(list, index):
-    list.sort(key = lambda x: x[index])
-    return list
+    return list.sort(key = lambda x: x[index], reverse = True)
+
 
 def job_title(soup):
     jobs = []
@@ -70,8 +71,8 @@ def job_title(soup):
 
         ##locating h5 and then anchor will give job-title. Append job-title to list of titles.
         for h in div.find_all(name = "h5"):
-            for a in h.find_all(name = "a"):
-                job_list.append(a.contents[0])
+            job_list.append(h.get_text())
+            job_link.append("https://www.flexjobs.com" + h.a.get('href'))
 
         ##Span with class text-danger is job description. Append job description to list of descriptions.
         for span in div.find_all(name = "span", attrs = {"class" : "text-danger"}):
@@ -97,8 +98,17 @@ job_title(soup)
 
 def compile():
     for x in range (0, len(job_list)):
-        listing.append((job_list[x], description[x], location[x], summary[x], dates [x]))
+        listing.append([job_list[x], job_link[x], description[x], location[x], summary[x], dates [x]])
 
 compile()
-job_sort(listing, 4)
+job_sort(listing, 5)
 print ("listing: ", listing)
+
+
+
+def scrape():
+    print ("running scrape!")
+    labels = ("Job-Title", "Job-Link", "Description", "Location", "Summary", "Date-Posted")
+    df = pd.DataFrame.from_records(listing, columns = labels)
+    df.to_csv('scrapeddata.csv')
+scrape()
