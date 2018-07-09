@@ -4,6 +4,9 @@
 	- Converted file to excel file, DataFrame, using beautiful soup. Still need to get a better understanding of how the package works. It sounds like it can work with lists or dicts when transferring data into a DataFrame. Will now find how to gain html link for each job posting and have that as last index of listing. 
 	-Facing a problem:
 		*Was facing a problem with trying to convert to DataFrame, but it was because the documentation said to put the path of the file that you want to be saved. When I did that, it wouldn't work, but i realized I was already in the directory I wanted to be in, so I just tried making a file name and it worked. 
+		*Don't know how to make beautiful soup overwrite file that already exists. will have to convert dates to ints, things aren't ordered the way they should be. 
+			*Solution* When I added html link to index, didn't accomodate for it in my sorting function. Switched indices for sorting function and now sorted excel is complete. 
+	- Will just need to make for loop function to go through all pages of searched criteria and will be done. 
 
 7/8/18 : Beginning to understand Python Lambda
 	- Started reading about Lambda (to use instead of itemgetter. Felt like learning lambda may come in handy as opposed to just using a python package).
