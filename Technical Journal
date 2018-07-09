@@ -1,4 +1,14 @@
-7/7/18
+7/8/18 : Beginning to understand Python Lambda
+	- Started reading about Lambda (to use instead of itemgetter. Felt like learning lambda may come in handy as opposed to just using a python package).
+	- Made job_sort(list, index), that will sort a list at whatever index you put as the argument. Will check if it works when i get home (computer at work doesn't have python installed). 
+	- From my understanding, using lambda is a short-hand for creating a function using DEF. 
+	https://www.programiz.com/python-programming/anonymous-function
+	- Reading through the site, used map() & filter() as examples. Those functions accept two arguments and the first argument is the lambda function and the 2nd is the list or object.
+	- I may need to remove the space from the date within the scraper and turn the potential string into a int to have sort properly work. 
+	- Will need to create for loop to go through all pages of search and filter those. Still need to convert this data into an excel or whatever medium I decide upon (Probably excel spreadsheet).
+	- Thinking I should either subscripe to flexjobs or I should begin to create a scraper for craig's list or a different site. 
+
+7/7/18 : Making month strings into respective numbers
 	- Thinking about the Web scraper. Had conversation with Eric not fully understanding the point of doing it. He mentioned the idea of using the webscraper one day and finding a way to check if there were new posts between days (i.e. making list that shows only new posts or using the scraper to organize via date posted?)
 	- Another thing I was thinking of would be to access the job sites API in order to retrieve entire list of job postings (1000+ per search) and use the job scraper on that instea of doing it page by page. Going to see what the API looks like for flexjobs. 
 	- Wondering if it would be more effective to create an object with each variable as a key and use that to create scraped data or put it all into a list. OR! not even making a list or object and using forloop to directly create output. If I were to use Object, wouldn't be able to organize by date posted? If I were to change the month into a number, I could sort properly (If each post was in a list with each variable) based upon the month and post it that way? Maybe even update the list or create another variable to store the sorted version.
