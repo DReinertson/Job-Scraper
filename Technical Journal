@@ -1,3 +1,9 @@
+7/10/18 : Writing CSV files
+	- Starting to read through the 14.1 csv files: Really just wanting to learn how to save csv file and overwrite current file or save a new version. 
+	- Problem: 
+		*Right now if I run the program, it'll save the file with whatever name I write. If I run program after, with file already in the folder, it won't work. Particularly why I'm reading through documentation. Also, trying to understand how to convert to CSV file and reading through Panda / Beautiful soup. 
+	
+
 7/9/18 : Sort worked on list. Now to iterate over all pages
 	- Sort worked on specific index, didn't need to change to int
 	- Used reverse = True argument to put newest posts first. 
