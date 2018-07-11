@@ -1,3 +1,9 @@
+7/11/18 : For loop for multiple pages
+	- Update:
+		* Program now runs even though previous file exists. Not sure why it started working, maybe code was off before and something else was preventing it from completing?
+	- Will create for loop at the beginning of the function that will essentially run all of the scraping code for each webpage and then compile everything at the end. 
+	- Trying to figure out how many times to iterate for loop. Will locate second to last list item under the Ul with class = pagination. (2nd to last cause last one has the value of "next"). And will create variable equal to that number in second to last li item. 
+
 7/10/18 : Writing CSV files
 	- Starting to read through the 14.1 csv files: Really just wanting to learn how to save csv file and overwrite current file or save a new version. 
 		* https://docs.python.org/3/library/functions.html#open
