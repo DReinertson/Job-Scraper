@@ -7,7 +7,8 @@
 		*Looks like right now I'm converting to CSV file using Panda package and not the built-in Python. It does seem like with the built-in python, you can either use open with("file name", 'a') to append data to the old day (may keep compliing and doulbe in size even if things are the same) or I could use open with ("file name", "w") to Overwrite (Which may be the method I want to use, since i'm already organizing by most recent post, I don't care if old data gets overwritten).
 		*Panda package seems to have its own way to overwrite:
 			data https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html
-	
+	-To do :
+		* Will try to use panda's documentation to overwrite, if that doesn't work, will go to built-in python csv writing and use that sytanx.
 
 7/9/18 : Sort worked on list. Now to iterate over all pages
 	- Sort worked on specific index, didn't need to change to int
