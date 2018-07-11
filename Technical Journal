@@ -1,7 +1,12 @@
 7/10/18 : Writing CSV files
 	- Starting to read through the 14.1 csv files: Really just wanting to learn how to save csv file and overwrite current file or save a new version. 
+		* https://docs.python.org/3/library/functions.html#open
+		* https://docs.python.org/3.4/library/csv.html
 	- Problem: 
 		*Right now if I run the program, it'll save the file with whatever name I write. If I run program after, with file already in the folder, it won't work. Particularly why I'm reading through documentation. Also, trying to understand how to convert to CSV file and reading through Panda / Beautiful soup. 
+		*Looks like right now I'm converting to CSV file using Panda package and not the built-in Python. It does seem like with the built-in python, you can either use open with("file name", 'a') to append data to the old day (may keep compliing and doulbe in size even if things are the same) or I could use open with ("file name", "w") to Overwrite (Which may be the method I want to use, since i'm already organizing by most recent post, I don't care if old data gets overwritten).
+		*Panda package seems to have its own way to overwrite:
+			data https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html
 	
 
 7/9/18 : Sort worked on list. Now to iterate over all pages
