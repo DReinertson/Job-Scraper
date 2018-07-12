@@ -1,3 +1,9 @@
+7/12/18 : Universal scraper
+	- As I have been working through my scraper, I've begun to think about efficiency in terms of multiple websites. I know that my code currently works on my website and the only other websites that it would work on are ones that are designed in the exact same way (Which is highly unlikely). 
+		**It would be nice if I could figure out a way to make the scraper work on multiple websites with the same code. I could write scraping functions to use per website, i.e. have a function, put the specific URL within that function and all the beautifulSoup functions that scrapes the data and compile at the end, then call original function. 
+		**Is there a way to have code figure out what the title of the job is across every website? description of job? location?...etc
+	- Still currently trying to figure out how to run the python code through my flash drive so I can work on the projects while away from home. 
+
 7/11/18 : For loop for multiple pages
 	- Update:
 		* Program now runs even though previous file exists. Not sure why it started working, maybe code was off before and something else was preventing it from completing?
