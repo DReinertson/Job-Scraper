@@ -3,6 +3,7 @@
 		* Program now runs even though previous file exists. Not sure why it started working, maybe code was off before and something else was preventing it from completing?
 	- Will create for loop at the beginning of the function that will essentially run all of the scraping code for each webpage and then compile everything at the end. 
 	- Trying to figure out how many times to iterate for loop. Will locate second to last list item under the Ul with class = pagination. (2nd to last cause last one has the value of "next"). And will create variable equal to that number in second to last li item. 
+	- Wrote code that I can't test currently that finds how many 'li' items are within 'ul' and uses the 2nd to last 'li'.get_text()(Used .count() method). This will give the number of pages. Then created Multi_page() that goes through for loop x (number of pages) times appending to job_list with each search page. Will test when home. 
 
 7/10/18 : Writing CSV files
 	- Starting to read through the 14.1 csv files: Really just wanting to learn how to save csv file and overwrite current file or save a new version. 
